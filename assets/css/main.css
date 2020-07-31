@@ -237,6 +237,7 @@ ul.round {
   font-weight: bold;
   text-transform: uppercase;
   letter-spacing: 0.3px;
+  text-align: center;
 }
 
 .btn {
@@ -8484,6 +8485,10 @@ html {
   border-bottom: 1px solid #e5e5e5;
 }
 
+.thinkful {
+  width: 100%;
+}
+
 .thinkful-logo {
   width: 60px;
   height: 60px;
@@ -8628,7 +8633,7 @@ footer > * {
     justify-content: space-around;
   }
 
-  .start, .thinkful, .thinkful-brand, .thinkful-pros {
+  .start, .thinkful, .thinkful-brand {
     flex-direction: row;
     justify-content: space-between;
   }
@@ -8673,6 +8678,12 @@ footer > * {
   .footer-social {
     vertical-align: middle;
     padding: 0;
+  }
+}
+@media (min-width: 768px) {
+  .thinkful-pros {
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
