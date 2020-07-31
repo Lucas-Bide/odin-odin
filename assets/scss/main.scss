@@ -1,0 +1,309 @@
+@import "../../odin-css-framework/fw.scss";
+
+@import "../../fontawesome-free-5.14.0-web/scss/fontawesome.scss";
+@import "../../fontawesome-free-5.14.0-web/scss/solid.scss";
+@import "../../fontawesome-free-5.14.0-web/scss/brands.scss";
+
+
+// Assignment Headers
+
+html {
+  overflow-x: hidden;
+}
+
+.header-top {
+  margin-top: 50px;
+  padding-top: 100px;
+}
+
+.header-bottom {
+  margin-bottom: 20px;
+}
+
+.instructions {
+  background: $bg-grey;
+  width: 100%;
+}
+
+.celebrate {
+  background: linear-gradient(to right, $gold, $turquoise);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.bg-grey {
+  background: $bg-grey;
+  padding: 60px;
+}
+
+.section-header {
+  position: relative;
+}
+
+.section-header:hover {
+  color: black;
+}
+
+.section-header .fa-link {
+  display: none !important;
+}
+
+.section-header:hover .fa-link {
+  display: inline-block !important;
+  position: absolute;
+  padding-top: 5px;
+  left: -20px;
+  color: $text-grey;
+  font-size: .7em;
+}
+
+// Lesson Functions
+
+.lesson-functions, .promo {
+  background: white;
+  box-shadow: 0 5px 16px 0 rgba(0,0,0,0.1);
+}
+
+.lesson-functions, .question, .promo, .start, .thinkful {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+}
+
+// Discord plug
+
+.question, .start {
+  align-items: center;
+  color: $text-grey;
+}
+
+.question p {
+  margin-bottom: 20px;
+}
+
+.github {
+  text-align: center;
+}
+
+// Thinkful Promotion
+
+.promo, .thinkful {
+  align-items: center;
+}
+
+.promo-header {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  width: 70%;
+  text-align: center;
+}
+
+.start {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.thinkful-logo {
+  width: 60px;
+  height: 60px;
+}
+
+.thinkful-brand {
+  display: flex;
+  gap: 20px;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+
+.thinkful-pros {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+}
+
+.thinkful-pro {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pic {
+  width: 48px;
+  height: 40px;
+}
+
+// Footer
+
+footer {
+  height: 277px;
+  display: flex;
+}
+
+footer > * {
+  height: 100%;
+}
+
+.footer-social {
+  flex: 1 0;
+  color: $gold;
+  font-size: 24px;
+  display: flex;
+  gap: 25px;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 10px;
+}
+
+.footer-brand-container, .footer-links {
+  flex: 2 0;
+}
+
+.footer-brand {
+  word-wrap: none;
+  width: max-content;
+  margin: 103.5px auto;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+}
+
+.links-container {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  justify-content: center;
+}
+
+// Floating Buttons
+
+.btn-holder {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.floating-buttons {
+  position: relative;
+  width: 68px;
+  height: 200px; //65px;
+  transition: ease height 0.5s, ;
+}
+
+.floating-buttons:hover {
+  height: 200px;
+}
+
+.floating-button {
+  position: absolute;
+  width: 50px;
+  height: 40px;
+  background: $turquoise;
+  color: white;
+  border-radius: 50%;
+  padding: 8px;
+  text-align: center;
+  font-size: 1.2rem;
+  bottom: 20px;
+  right: 20px;
+  box-shadow: 0 0 15px 6px rgba(0,0,0,0.1);
+}
+
+.floating-button:hover {
+  box-shadow: 0 0 15px 6px rgba(0,0,0,0.2);
+}
+
+
+.floating-button i {
+  padding: auto 0;
+}
+
+.top-button {
+  width: 68px;
+  height: 65px;
+  padding: 16px;
+  font-size: 2rem; 
+  z-index: 2;
+  bottom: 0px;
+  right: 0;
+
+}
+
+.mid-button, .bottom-button {
+  z-index: 1;
+  right: 10px;
+  transition: ease bottom 0.5s;
+}
+
+.floating-buttons:hover .mid-button {
+  bottom: 90px;
+}
+
+.floating-buttons:hover .bottom-button {
+  bottom: 150px;
+}
+
+
+
+@media(min-width: 980px) {
+  .lesson-functions {
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .start, .thinkful, .thinkful-brand, .thinkful-pros {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .promo-header {
+    text-align: left;
+  }
+}
+
+@media(min-width: 540px)
+{
+  .lesson-functions {
+    padding: 40px 30px;
+  }
+}
+
+@media(max-width: 756px) {
+  footer {
+    height: 140px;
+  }
+
+  .footer-brand-container {
+    display: none;
+  }
+
+  .footer-social > * {
+    flex: 1;
+    padding: 0 auto;
+    text-align: center;
+  }
+
+  .footer-links {
+    flex: 1;
+  }
+}
+
+@media(max-width: 469.99px) {
+  footer {
+    height: 70px;
+  }
+
+  .footer-links {
+    display: none;
+  }
+
+  .footer-social {
+    vertical-align: middle;
+    padding: 0;
+  }
+}
